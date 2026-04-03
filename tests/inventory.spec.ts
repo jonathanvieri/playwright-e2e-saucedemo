@@ -1,13 +1,8 @@
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
+import { test, expect } from './fixtures';
 import { InventoryPage } from '../pages/InventoryPage';
 
-test('user can add and remove item from cart', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  const inventoryPage = new InventoryPage(page);
-
-  await loginPage.goto();
-  await loginPage.login('standard_user', 'secret_sauce');
+test('user can add and remove item from cart', async ({ loggedInPage }) => {
+  const inventoryPage = new InventoryPage(loggedInPage);
 
   // Add item
   await inventoryPage.addBackpackToCart();
