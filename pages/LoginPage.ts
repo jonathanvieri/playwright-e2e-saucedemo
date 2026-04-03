@@ -1,4 +1,4 @@
-import { Page, Expect, expect } from '@playwright/test';
+import { Page } from '@playwright/test';
 
 export class LoginPage {
   readonly page: Page;
