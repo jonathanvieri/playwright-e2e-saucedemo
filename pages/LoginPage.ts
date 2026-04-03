@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, Expect, expect } from '@playwright/test';
 
 export class LoginPage {
   readonly page: Page;
@@ -11,9 +11,13 @@ export class LoginPage {
     await this.page.goto('https://www.saucedemo.com/');
   }
 
-  async login() {
-    await this.page.getByTestId('username').fill('standard_user');
-    await this.page.getByTestId('password').fill('secret_sauce');
+  async login(username: string, password: string) {
+    await this.page.getByTestId('username').fill(username);
+    await this.page.getByTestId('password').fill(password);
     await this.page.getByTestId('login-button').click();
+  }
+
+  getErrorMessage() {
+    return this.page.getByTestId('error');
   }
 }
