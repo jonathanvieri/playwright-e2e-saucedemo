@@ -14,4 +14,8 @@ export class InventoryPage {
   getShoppingCartBadge() {
     return this.page.getByTestId('shopping-cart-badge');
   }
+
+  async removeBackpackFromCart() {
+    await this.page.getByTestId('remove-sauce-labs-backpack').click();
+  }
 }
