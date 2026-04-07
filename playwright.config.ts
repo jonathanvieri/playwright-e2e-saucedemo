@@ -7,12 +7,16 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: [['html', { open: 'never' }]],
 
   use: {
     baseURL: config.baseUrl,
     testIdAttribute: 'data-test',
-    trace: 'on-first-retry',
+
+    // Reporting
+    screenshot: 'only-on-failure',
+    trace: 'retain-on-failure',
+    video: 'retain-on-failure',
   },
 
   projects: [
