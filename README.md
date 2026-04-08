@@ -1,5 +1,10 @@
-# Playwright Automation Framework
-A scalable test automation framework built with Playwright and TypeScript, following best practices such as Page Object Model, fixtures, environment configuration, and CI/CD integration.
+# Playwright E2E Test Automation for SauceDemo
+A scalable end-to-end (E2E) test automation framework built with Playwright and TypeScript for the SauceDemo e-commerce application.
+
+It follows industry best practices, including Page Object Model (POM), custom fixtures, environment-based configuration, reporting, and CI/CD integration.
+
+The framework validates core user journeys by simulating real user behavior through the UI on https://www.saucedemo.com/
+
 
 ## Tech Stack
 - Playwright (TypeScript)
@@ -12,6 +17,12 @@ A scalable test automation framework built with Playwright and TypeScript, follo
 - Environment-based configuration using dotenv
 - HTML reporting with screenshots, videos, and traces on failure
 - GitHub Actions integration for automated test runs on push and PR
+
+## Test Scenarios Covered
+- Login (valid and invalid users)
+- Add item to cart
+- Remove item from cart
+- Checkout flow (in progress)
 
 ## Project Structure
 - `tests/` → test specs  
@@ -47,3 +58,9 @@ INVALID_PASSWORD=
 
 Tests are automatically executed on every push and PR using GitHub Actions.  
 Test reports are uploaded as artifacts.
+
+## Future Improvements
+- Complete checkout flow automation
+- Data-driven testing
+- Test tagging (smoke/regression)
+- Publish reports via GitHub Pages
