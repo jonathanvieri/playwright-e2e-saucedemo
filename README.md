@@ -22,7 +22,7 @@ The framework validates core user journeys by simulating real user behavior thro
 - Login (valid and invalid users)
 - Add item to cart
 - Remove item from cart
-- Checkout flow (in progress)
+- Checkout flow (end-to-end)
 
 ## Project Structure
 - `tests/` → test specs  
