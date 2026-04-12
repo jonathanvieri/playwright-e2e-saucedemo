@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { config } from '../utils/config';
 
-test('user can login with valid credentials', async ({ page }) => {
+test('@smoke user can login with valid credentials', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.goto();
@@ -12,7 +12,7 @@ test('user can login with valid credentials', async ({ page }) => {
   await expect(page).toHaveTitle('Swag Labs');
 });
 
-test('user cannot login with invalid credendentials', async ({ page }) => {
+test('@smoke user cannot login with invalid credendentials', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.goto();

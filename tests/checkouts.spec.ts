@@ -5,7 +5,7 @@ import { CheckoutPage } from '../pages/CheckoutPage';
 import { checkoutUsers } from '../utils/testData';
 
 checkoutUsers.forEach((user) => {
-  test(`user can complete checkout flow - ${user.firstName}`, async ({ loggedInPage }) => {
+  test(`@smoke @regression user can complete checkout flow - ${user.firstName}`, async ({ loggedInPage }) => {
     const inventoryPage = new InventoryPage(loggedInPage);
     const cartPage = new CartPage(loggedInPage);
     const checkoutPage = new CheckoutPage(loggedInPage);

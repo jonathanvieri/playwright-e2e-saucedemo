@@ -1,7 +1,7 @@
 import { test, expect } from './fixtures';
 import { InventoryPage } from '../pages/InventoryPage';
 
-test('user can add and remove item from cart', async ({ loggedInPage }) => {
+test('@regression user can add and remove item from cart', async ({ loggedInPage }) => {
   const inventoryPage = new InventoryPage(loggedInPage);
 
   // Add item
