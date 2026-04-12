@@ -18,4 +18,9 @@ export class InventoryPage {
   async removeBackpackFromCart() {
     await this.page.getByTestId('remove-sauce-labs-backpack').click();
   }
+
+  async logout() {
+    await this.page.getByRole('button', { name: 'Open Menu' }).click();
+    await this.page.getByTestId('logout-sidebar-link').click();
+  }
 }
