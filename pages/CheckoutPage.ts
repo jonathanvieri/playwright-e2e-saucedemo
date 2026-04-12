@@ -28,4 +28,8 @@ export class CheckoutPage {
   getSuccessMessage() {
     return this.page.getByTestId('complete-header');
   }
+
+  getErrorMessage() {
+    return this.page.getByTestId('error');
+  }
 }

@@ -10,3 +10,12 @@ export const checkoutUsers = [
     postalCode: '07008',
   },
 ];
+
+export const invalidCheckoutUsers = [
+  {
+    firstName: 'John',
+    lastName: 'Roblox',
+    postalCode: '',
+    expectedError: 'Error: Postal Code is required',
+  },
+];
