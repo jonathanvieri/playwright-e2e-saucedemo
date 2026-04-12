@@ -3,8 +3,13 @@ A scalable end-to-end (E2E) test automation framework built with Playwright and 
 
 It follows industry best practices, including Page Object Model (POM), custom fixtures, environment-based configuration, reporting, and CI/CD integration.
 
-The framework validates core user journeys by simulating real user behavior through the UI on https://www.saucedemo.com/
+The framework validates core user journeys such as authentication, product interaction, and checkout by simulating real user behavior through the UI on https://www.saucedemo.com/
 
+## Live Test Report
+
+View the latest Playwright HTML report:
+
+https://jonathanvieri.github.io/playwright-e2e-saucedemo/
 
 ## Tech Stack
 - Playwright (TypeScript)
@@ -26,7 +31,7 @@ The framework validates core user journeys by simulating real user behavior thro
 
 ## Project Structure
 - `tests/` → test specs  
-- `pages`/ → page objects  
+- `pages/` → page objects  
 - `utils/` → config and helpers  
 - `.github/workflows/` → CI configuration  
 
@@ -60,7 +65,6 @@ Tests are automatically executed on every push and PR using GitHub Actions.
 Test reports are uploaded as artifacts.
 
 ## Future Improvements
-- Complete checkout flow automation
-- Data-driven testing
-- Test tagging (smoke/regression)
-- Publish reports via GitHub Pages
+- API + UI hybrid testing
+- Test data management via external sources (e.g. JSON/fixtures)
+- CI optimization (separate smoke vs regression runs)
